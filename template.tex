@@ -1,0 +1,34 @@
+% XeLaTeX
+\usepackage{xltxtra}
+\usepackage{xunicode}
+
+%Defines for the document:
+\input{defines.tex}
+
+% Fonts
+\setmainfont{Arial}
+\newfontfamily\cyrillicfont{Arial}
+\setmonofont{Courier New}
+
+%Language support(need to be compiled using XeLatex):
+%Main language selected in defines.tex file:
+\usepackage{polyglossia}
+\ifrussian
+\setmainlanguage{russian} 
+\setotherlanguage{english}
+\setotherlanguage{latvian}
+\fi
+\iflatvian
+\setmainlanguage{latvian} 
+\setotherlanguage{english}
+\setotherlanguage{russian}
+\fi
+
+%Set document margins:
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
